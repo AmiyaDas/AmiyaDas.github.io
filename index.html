@@ -342,42 +342,49 @@
         "played": 2,
         "won": 0,
         "lost": 1,
+        "draw": 1,
         "points": 1
       }, {
         "name": "ARUN",
         "played": 2,
         "won": 2,
         "lost": 0,
+        "draw": 0,
         "points": 4
       }, {
         "name": "ASHOK",
         "played": 0,
         "won": 0,
         "lost": 0,
+        "draw": 0,
         "points": 0
       }, {
         "name": "NITISH",
         "played": 0,
         "won": 0,
         "lost": 0,
+        "draw": 0,
         "points": 0
       }, {
         "name": "PAWAN",
         "played": 2,
         "won": 0,
         "lost": 2,
+        "draw": 0,
         "points": 0
       }, {
         "name": "PRINCE",
         "played": 1,
         "won": 1,
         "lost": 0,
+        "draw": 0,
         "points": 2
       }, {
         "name": "RAHUL",
         "played": 1,
         "won": 0,
         "lost": 0,
+        "draw": 1,
         "points": 1
       }
     ];
@@ -408,6 +415,7 @@
             <th>Played</th>
             <th>Won</th>
             <th>Lost</th>
+            <th>Draw</th>
             <th>Points</th>
           </tr>
         </table>
@@ -463,9 +471,10 @@
         matchWinner.innerHTML = "WINNER : " + match.winner;
         matchWinner.className = matchWinner.className + " " + match.winner;
       }
-else if(match.winner=="DRAW"){
-matchWinner.innerHTML = "WINNER : DRAW";
-}  else {
+      else if(match.winner=="DRAW"){
+        matchWinner.innerHTML = "WINNER : DRAW";
+      }  
+      else {
         matchWinner.innerHTML = "WINNER : ?";
       }
 
@@ -490,16 +499,19 @@ matchWinner.innerHTML = "WINNER : DRAW";
       var col3 = document.createElement("td");
       var col4 = document.createElement("td");
       var col5 = document.createElement("td");
+      var col6 = document.createElement("td");
       col1.innerHTML = player.name;
       col2.innerHTML = player.played;
       col3.innerHTML = player.won;
       col4.innerHTML = player.lost;
-      col5.innerHTML = player.points;
+      col5.innerHTML = player.draw;
+      col6.innerHTML = player.points;
       tableRow.appendChild(col1);
       tableRow.appendChild(col2);
       tableRow.appendChild(col3);
       tableRow.appendChild(col4);
       tableRow.appendChild(col5);
+      tableRow.appendChild(col6);
       pointsTable.appendChild(tableRow);
     });
   </script>
