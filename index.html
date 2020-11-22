@@ -52,7 +52,7 @@
         "date": "11/22/20",
         "p1": "AMIYA",
         "p2": "RAHUL",
-        "winner": ""
+        "winner": "DRAW"
       },
       {
         "matchNo": "MATCH 7",
@@ -339,10 +339,10 @@
     var tableData = [
       {
         "name": "AMIYA",
-        "played": 1,
+        "played": 2,
         "won": 0,
         "lost": 1,
-        "points": 0
+        "points": 1
       }, {
         "name": "ARUN",
         "played": 2,
@@ -375,10 +375,10 @@
         "points": 2
       }, {
         "name": "RAHUL",
-        "played": 0,
+        "played": 1,
         "won": 0,
         "lost": 0,
-        "points": 0
+        "points": 1
       }
     ];
   </script>
@@ -463,7 +463,9 @@
         matchWinner.innerHTML = "WINNER : " + match.winner;
         matchWinner.className = matchWinner.className + " " + match.winner;
       }
-      else {
+else if(match.winner=="DRAW"){
+matchWinner.innerHTML = "WINNER : DRAW";
+}  else {
         matchWinner.innerHTML = "WINNER : ?";
       }
 
