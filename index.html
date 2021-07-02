@@ -1,520 +1,542 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Chess Tournament</title>
-  <link href="style.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-
-<body>
-  <script>
-    var data = [
-      {
-        "matchNo": "MATCH 1",
-        "date": "11/21/20",
-        "p1": "ARUN",
-        "p2": "AMIYA",
-        "winner": "ARUN"
-      },
-      {
-        "matchNo": "MATCH 2",
-        "date": "11/21/20",
-        "p1": "RAHUL",
-        "p2": "NITISH",
-        "winner": "NITISH"
-      },
-      {
-        "matchNo": "MATCH 3",
-        "date": "11/21/20",
-        "p1": "PRINCE",
-        "p2": "PAWAN",
-        "winner": "PRINCE"
-      },
-      {
-        "matchNo": "MATCH 4",
-        "date": "11/21/20",
-        "p1": "AMIYA",
-        "p2": "ASHOK",
-        "winner": "AMIYA"
-      },
-      {
-        "matchNo": "MATCH 5",
-        "date": "11/22/20",
-        "p1": "ARUN",
-        "p2": "PAWAN",
-        "winner": "ARUN"
-      },
-      {
-        "matchNo": "MATCH 6",
-        "date": "11/22/20",
-        "p1": "AMIYA",
-        "p2": "RAHUL",
-        "winner": "DRAW"
-      },
-      {
-        "matchNo": "MATCH 7",
-        "date": "11/22/20",
-        "p1": "NITISH",
-        "p2": "PRINCE",
-        "winner": "PRINCE"
-      },
-      {
-        "matchNo": "MATCH 8",
-        "date": "11/22/20",
-        "p1": "ARUN",
-        "p2": "ASHOK",
-        "winner": "ASHOK"
-      },
-      {
-        "matchNo": "MATCH 9",
-        "date": "11/22/20",
-        "p1": "PAWAN",
-        "p2": "ASHOK",
-        "winner": "ASHOK"
-      },
-      {
-        "matchNo": "MATCH 10",
-        "date": "11/23/20",
-        "p1": "RAHUL",
-        "p2": "ARUN",
-        "winner": "RAHUL"
-      },
-      {
-        "matchNo": "MATCH 11",
-        "date": "11/23/20",
-        "p1": "AMIYA",
-        "p2": "PRINCE",
-        "winner": "AMIYA"
-      },
-      {
-        "matchNo": "MATCH 12",
-        "date": "11/23/20",
-        "p1": "PAWAN",
-        "p2": "NITISH",
-        "winner": "NITISH"
-      },
-      {
-        "matchNo": "MATCH 13",
-        "date": "11/23/20",
-        "p1": "RAHUL",
-        "p2": "ASHOK",
-        "winner": "ASHOK"
-      },
-      {
-        "matchNo": "MATCH 14",
-        "date": "11/24/20",
-        "p1": "ARUN",
-        "p2": "NITISH",
-        "winner": "ARUN"
-      },
-      {
-        "matchNo": "MATCH 15",
-        "date": "11/24/20",
-        "p1": "AMIYA",
-        "p2": "PAWAN",
-        "winner": "AMIYA"
-      },
-      {
-        "matchNo": "MATCH 16",
-        "date": "11/24/20",
-        "p1": "RAHUL",
-        "p2": "PRINCE",
-        "winner": "PRINCE"
-      },
-      {
-        "matchNo": "MATCH 17",
-        "date": "11/24/20",
-        "p1": "PRINCE",
-        "p2": "ASHOK",
-        "winner": "PRINCE"
-      },
-      {
-        "matchNo": "MATCH 18",
-        "date": "11/25/20",
-        "p1": "NITISH",
-        "p2": "AMIYA",
-        "winner": "AMIYA"
-      },
-      {
-        "matchNo": "MATCH 19",
-        "date": "11/25/20",
-        "p1": "PRINCE",
-        "p2": "ARUN",
-        "winner": "PRINCE"
-      },
-      {
-        "matchNo": "MATCH 20",
-        "date": "11/25/20",
-        "p1": "PAWAN",
-        "p2": "RAHUL",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 21",
-        "date": "11/25/20",
-        "p1": "NITISH",
-        "p2": "ASHOK",
-        "winner": "ASHOK"
-      },
-      {
-        "matchNo": "MATCH 22",
-        "date": "11/26/20",
-        "p1": "ARUN",
-        "p2": "AMIYA",
-        "winner": "ARUN"
-      },
-      {
-        "matchNo": "MATCH 23",
-        "date": "11/26/20",
-        "p1": "RAHUL",
-        "p2": "NITISH",
-        "winner": "RAHUL"
-      },
-      {
-        "matchNo": "MATCH 24",
-        "date": "11/26/20",
-        "p1": "PRINCE",
-        "p2": "PAWAN",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 25",
-        "date": "11/26/20",
-        "p1": "PAWAN",
-        "p2": "ASHOK",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 26",
-        "date": "11/27/20",
-        "p1": "ARUN",
-        "p2": "PAWAN",
-        "winner": "ARUN"
-      },
-      {
-        "matchNo": "MATCH 27",
-        "date": "11/27/20",
-        "p1": "AMIYA",
-        "p2": "RAHUL",
-        "winner": "AMIYA"
-      },
-      {
-        "matchNo": "MATCH 28",
-        "date": "11/27/20",
-        "p1": "NITISH",
-        "p2": "PRINCE",
-        "winner": "PRINCE"
-      },
-      {
-        "matchNo": "MATCH 29",
-        "date": "11/27/20",
-        "p1": "AMIYA",
-        "p2": "ASHOK",
-        "winner": "AMIYA"
-      },
-      {
-        "matchNo": "MATCH 30",
-        "date": "11/28/20",
-        "p1": "RAHUL",
-        "p2": "ARUN",
-        "winner": "ARUN"
-      },
-      {
-        "matchNo": "MATCH 31",
-        "date": "11/28/20",
-        "p1": "AMIYA",
-        "p2": "PRINCE",
-        "winner": "PRINCE"
-      },
-      {
-        "matchNo": "MATCH 32",
-        "date": "11/28/20",
-        "p1": "PAWAN",
-        "p2": "NITISH",
-        "winner": "PAWAN"
-      },
-      {
-        "matchNo": "MATCH 33",
-        "date": "11/28/20",
-        "p1": "ARUN",
-        "p2": "ASHOK",
-        "winner": "ASHOK"
-      },
-      {
-        "matchNo": "MATCH 34",
-        "date": "11/29/20",
-        "p1": "ARUN",
-        "p2": "NITISH",
-        "winner": "ARUN"
-      },
-      {
-        "matchNo": "MATCH 35",
-        "date": "11/29/20",
-        "p1": "AMIYA",
-        "p2": "PAWAN",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 36",
-        "date": "11/29/20",
-        "p1": "RAHUL",
-        "p2": "PRINCE",
-        "winner": "PRINCE"
-      },
-      {
-        "matchNo": "MATCH 37",
-        "date": "11/29/20",
-        "p1": "RAHUL",
-        "p2": "ASHOK",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 38",
-        "date": "11/29/20",
-        "p1": "PRINCE",
-        "p2": "ASHOK",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 39",
-        "date": "11/30/20",
-        "p1": "NITISH",
-        "p2": "AMIYA",
-        "winner": "AMIYA"
-      },
-      {
-        "matchNo": "MATCH 40",
-        "date": "11/30/20",
-        "p1": "PRINCE",
-        "p2": "ARUN",
-        "winner": "ARUN"
-      },
-      {
-        "matchNo": "MATCH 41",
-        "date": "11/30/20",
-        "p1": "PAWAN",
-        "p2": "RAHUL",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 42",
-        "date": "11/30/20",
-        "p1": "NITISH",
-        "p2": "ASHOK",
-        "winner": "ASHOK"
-      },
-      {
-        "matchNo": "MATCH 43",
-        "date": "12/1/20",
-        "p1": "Position 1",
-        "p2": "Position 2",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 44",
-        "date": "12/1/20",
-        "p1": "Position 3",
-        "p2": "Position 4",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 45",
-        "date": "12/2/20",
-        "p1": "Winner of Match  44",
-        "p2": "Loser of Match 43",
-        "winner": ""
-      },
-      {
-        "matchNo": "MATCH 46",
-        "date": "12/2/20",
-        "p1": "Winner of Match  43",
-        "p2": "Winner of Match 46",
-        "winner": ""
-      }
-    ];
-
-    var tableData = [
-      {
-        "name": "AMIYA",
-        "played": 11,
-        "won": 7,
-        "lost": 3,
-        "draw": 1,
-        "points": 15
-      }, {
-        "name": "ARUN",
-        "played": 12,
-        "won": 8,
-        "lost": 4,
-        "draw": 0,
-        "points": 16
-      }, {
-        "name": "ASHOK",
-        "played": 9,
-        "won": 6,
-        "lost": 3,
-        "draw": 0,
-        "points": 12
-      }, {
-        "name": "NITISH",
-        "played": 4,
-        "won": 2,
-        "lost": 2,
-        "draw": 0,
-        "points": 4
-      }, {
-        "name": "PAWAN",
-        "played": 7,
-        "won": 1,
-        "lost": 6,
-        "draw": 0,
-        "points": 2
-      }, {
-        "name": "PRINCE",
-        "played": 10,
-        "won": 8,
-        "lost": 2,
-        "draw": 0,
-        "points": 16
-      }, {
-        "name": "RAHUL",
-        "played": 9,
-        "won": 2,
-        "lost": 6,
-        "draw": 1,
-        "points": 5
-      }
-    ];
-  </script>
-  <div class="mainSection">
-    <div class="header">
-      <div id="Match" class="tabcontent">
-        <h1>Chess Tournament</h1>
-        <p>21 Nov 2020 - 2 Dec 2020</p>
-      </div>
-
-      <div id="Point" class="tabcontent">
-        <h1>Chess Tournament</h1>
-        <p>21 Nov 2020 - 2 Dec 2020</p>
-      </div>
-      <button class="tablink" onclick="openCity('Match', this)" id="defaultOpen">Matches</button>
-      <button class="tablink" onclick="openCity('Point', this)">Points Table</button>
-    </div>
-
-
-    <div class="bodySection">
-      <div class="tabSection" id="MatchSec">
-      </div>
-      <div class="tabSection" id="PointSec">
-        <table id="pointsTable">
-          <tr>
-            <th>Player</th>
-            <th>Played</th>
-            <th>Won</th>
-            <th>Lost</th>
-            <th>Draw</th>
-            <th>Points</th>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function openCity(cityName, elmnt) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-      document.getElementById(cityName).style.display = "block";
-      elmnt.style.backgroundColor = "#223577";
-      tabSec = document.getElementsByClassName("tabSection");
-      for (i = 0; i < tabSec.length; i++) {
-        tabSec[i].style.display = "none";
-      }
-      document.getElementById(cityName + "Sec").style.display = "block";
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="icon.jpg" type="image/gif" sizes="16x16" />
+  <title>Study</title>
+  <style>
+    .qstn {
+      font-size: 15pt;
+      color: #610b4b;
     }
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
 
-    var bodySec = document.getElementById("MatchSec");
-    data.forEach(match => {
-      var matchBox = document.createElement("div");
-      matchBox.classList = "matchBox";
+    .title {
+      /* margin-left: 15%; */
+      /* margin-right: 15%; */
+      text-align: center;
+      color: white;
+      font-size: 30pt;
+      text-shadow: 1px 1px 2px black;
+      font-family: sans-serif;
+      font-style: bold;
+      padding: 0.3rem;
+      background-color: #00bf9a;
+      background-image: url("background-img.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 2em;
+    }
 
-      var matchDate = document.createElement("div");
-      matchDate.classList = "matchDate";
-      matchDate.innerHTML = match.matchNo + "  -  " + match.date;
+    .subtitle {
+      margin-top: 0.8rem;
+      /* margin-left: 15%;
+		margin-right: 15%; */
+      color: white;
+      font-size: 20pt;
+      font-family: sans-serif;
+      padding: 0.3rem;
+      background-color: #00bf9a;
+      cursor: pointer;
+    }
 
-      var matchTitle = document.createElement("div");
-      matchTitle.classList = "matchTitle";
-      var p1 = document.createElement("div");
-      p1.classList = match.p1;
-      p1.innerHTML = match.p1;
-      var p2 = document.createElement("div");
-      p2.classList = match.p2;
-      p2.innerHTML = match.p2;
-      matchTitle.appendChild(p1);
-      matchTitle.appendChild(p2);
+    .box {
+      font-family: erdana, helvetica, arial, sans-serif;
+      /* margin-left: 15%;
+		margin-right: 15%; */
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 1);
+      color: #000;
+      transition: 0.4s ease-out;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(200, 200, 200, 0.85);
+    }
 
-      var matchWinner = document.createElement("div");
-      matchWinner.classList = "matchWinner";
-      if (match.winner && match.winner != "") {
-        matchWinner.innerHTML = "WINNER : " + match.winner;
-        matchWinner.className = matchWinner.className + " " + match.winner;
+    .ans {
+      font-size: 11pt;
+    }
+
+    .code {
+      width: 90%;
+      margin-bottom: 8px;
+      margin-top: 8px;
+      font-family: consolas;
+      font-size: 10pt;
+      padding: 5px;
+      border: 1px solid #d5ddc6;
+      border-left: 4px solid #6b5;
+      box-shadow: 6px 3px 8px #d4d4d4;
+    }
+
+    .parentBlock {
+      margin: auto;
+      width: 70%;
+      padding: 1rem;
+      box-shadow: 5px 5px 30px 5px #999;
+      background-color: #fafafa;
+    }
+
+    .block {
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .checkBoxes ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .checkBoxes input {
+      width: 15px;
+      height: 15px;
+      pointer-events: none;
+    }
+
+    .checkBoxes li {
+      background-color: #faa;
+    }
+
+    .doneTopic {
+      background-color: #0d7 !important;
+    }
+
+    .oldTopic {
+      background-color: #fd8 !important;
+    }
+
+	.sideTopic {
+      background-color: rgb(194, 194, 194) !important;
+    }
+  </style>
+  <script>
+    function showDetails(event) {
+      console.log(event);
+      if (event.target.nextElementSibling.className.indexOf("hide") > -1) {
+        event.target.nextElementSibling.className = "box";
+      } else {
+        event.target.nextElementSibling.classList.add("hide");
       }
-      else if(match.winner=="DRAW"){
-        matchWinner.innerHTML = "WINNER : DRAW";
-      }  
-      else {
-        matchWinner.innerHTML = "WINNER : ?";
-      }
-
-      matchBox.appendChild(matchDate);
-      matchBox.appendChild(matchTitle);
-      matchBox.appendChild(matchWinner);
-
-      bodySec.appendChild(matchBox);
-
-
-    });
-
-    //code for points table
-    tableData.sort(function (a, b) {
-      return b.points - a.points;
-    });
-    var pointsTable = document.getElementById("pointsTable");
-    tableData.forEach(player => {
-      var tableRow = document.createElement("tr");
-      var col1 = document.createElement("td");
-      var col2 = document.createElement("td");
-      var col3 = document.createElement("td");
-      var col4 = document.createElement("td");
-      var col5 = document.createElement("td");
-      var col6 = document.createElement("td");
-      col1.innerHTML = player.name;
-      col2.innerHTML = player.played;
-      col3.innerHTML = player.won;
-      col4.innerHTML = player.lost;
-      col5.innerHTML = player.draw;
-      col6.innerHTML = player.points;
-      tableRow.appendChild(col1);
-      tableRow.appendChild(col2);
-      tableRow.appendChild(col3);
-      tableRow.appendChild(col4);
-      tableRow.appendChild(col5);
-      tableRow.appendChild(col6);
-      pointsTable.appendChild(tableRow);
-    });
+    }
   </script>
-</body>
 
+  <body bgcolor="#f6f6f6" class="center">
+    <div class="parentBlock">
+      <div class="title">Interview Topics</div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">ToDo</div>
+        <div class="box">
+          <div class="qstn checkBoxes">
+            <ul>
+              <li><input type="checkbox" readonly />Intro(3h)</li>
+              <li><input type="checkbox" readonly />Data Structure (8h)</li>
+              <li><input type="checkbox" readonly />Puzzles (6h)</li>
+              <li><input type="checkbox" readonly />Javascript (6h)</li>
+              <li><input type="checkbox" readonly />Web (4h)</li>
+              <li><input type="checkbox" readonly />Angular (4h)</li>
+              <li class="sideTopic"><input type="checkbox" readonly />React (4h)</li>
+              <li class="sideTopic"><input type="checkbox" readonly />Node JS (4h)</li>
+              <li class="sideTopic"><input type="checkbox" readonly />Express JS (4h)</li>
+              <li><input type="checkbox" readonly />Cloud (4h)</li>
+              <li><input type="checkbox" readonly />Java (6h)</li>
+              <li>
+                <input type="checkbox" readonly />Java(Micro-services) (3h)
+              </li>
+              <li><input type="checkbox" readonly />DBMS (6h)</li>
+              <li class="sideTopic"><input type="checkbox" readonly />Graph QL</li>
+              <li class="oldTopic">
+                <input type="checkbox" readonly />Team & Projects (6h)
+              </li>
+              <li class="oldTopic">
+                <input type="checkbox" readonly />SAP UI5 (4h)
+              </li>
+              <li class="oldTopic">
+                <input type="checkbox" readonly />OData (2h)
+              </li>
+              <li class="oldTopic">
+                <input type="checkbox" readonly />HANA (2h)
+              </li>
+              <li class="oldTopic">
+                <input type="checkbox" readonly />SCP Neo (2h)
+              </li>
+              <li><input type="checkbox" readonly />About SAP(3h)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Intro Section</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Self Introduction</li>
+              <li>Your Projects</li>
+              <li>Strength/Weakness</li>
+              <li>Goals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Data Structure</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>geeks for geeks</li>
+              <li>sorting</li>
+              <li>Binary trees & BST</li>
+              <li>interview qstns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Puzzles</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>GeeksForGeeks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Javascript</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>interview qstns</li>
+              <li>diff btw Java & JS</li>
+              <li>diff btw oop & object based programming</li>
+              <li>RxJS</li>
+              <li>Call, apply, bind</li>
+              <li>ES5 Interview qstns</li>
+              <li>Whats new in ES6</li>
+              <li>Arrow functions</li>
+              <li>closure, promise, timeout, callback</li>
+              <li>CSS Preprocessors</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">
+          Web Development/Web Security
+        </div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>interview qstns</li>
+              <li>Web security-tokens/session/cookies/auth2</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Angular</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>What? Why?</li>
+              <li>npm</li>
+              <li>AoT Compilation</li>
+              <li>why typescript?</li>
+              <li>Building blocks of Angular</li>
+              <div class="ans">
+                <ul>
+                  <li>Modules</li>
+                  <li>Component</li>
+                  <li>Template</li>
+                  <li>Directives</li>
+                  <li>Data Binding</li>
+                  <li>Services</li>
+                  <li>Dependency Injection</li>
+                  <li>Routing</li>
+                </ul>
+              </div>
+              <li>Transpiling</li>
+              <li>Lifecycle Hooks of component</li>
+              <li>Components vs Directives</li>
+              <li>@Input vs @Output</li>
+              <li>ng-content Directive</li>
+              <li>ViewEncapsulation</li>
+              <li>RxJS</li>
+              <li>Services and command to create a service</li>
+              <li>Dependency Injection in Angular</li>
+              <li>RouterOutlet</li>
+              <li>Pipes</li>
+              <li>String Interpolation</li>
+              <li>
+                Data Binding
+                <div class="ans">
+                  <ul>
+                    <li>Event Binding</li>
+                    <li>Two-way Binding</li>
+                    <li>Property Binding</li>
+                  </ul>
+                </div>
+              </li>
+              <li>package.json what? use?</li>
+              <li>SPA (Single Page Application)</li>
+              <li>ngModel, what? use?</li>
+              <li>Subscribe method</li>
+              <li>Observables vs Promises</li>
+              <li>AsyncPipe</li>
+              <li>Redux</li>
+              <li>ng-Class vs ng-Style</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">React</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Intro tutorials</li>
+              <li>Interview qstns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Node JS</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Intro tutorials</li>
+              <li>Interview qstns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Express JS</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Intro tutorials</li>
+              <li>Interview qstns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Cloud</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Interview qstns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Java</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li
+                onclick="location.href='https://www.javatpoint.com/corejava-interview-questions'"
+              >
+                JavaTPoint
+              </li>
+              <li>
+                java - class object from inherited class like arraylist =list
+              </li>
+              <li>collections & differences</li>
+              <li>oop feature real lif examples</li>
+              <li>singleton</li>
+              <li>autoboxing & unboxing</li>
+              <li>create interface objects</li>
+              <li>early binding & late binding</li>
+              <li>checked & unchecked exception</li>
+              <li>design patterns</li>
+              <li>final finally finalize</li>
+              <li>string & string builder</li>
+              <li>New in java 9</li>
+              <li>New in java 8</li>
+              <li>New in java 9</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">
+          Java(Micro-services)
+        </div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>REST</li>
+              <li>Interview qstns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">DBMS</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Theroy</li>
+              <div class="ans">
+                <ul>
+                  <li>Design ER Diagrams</li>
+                  <li>Relations</li>
+                  <li>ACID properties</li>
+                  <li>type of joins</li>
+                  <li>Normalization</li>
+                  <li>Primary, Super & candidate keys</li>
+                </ul>
+              </div>
+              <li>SQL Queries</li>
+              <div class="ans">
+                <ul>
+                  <li>search the pdf with sql qstns and go through it</li>
+                  <li>Types of commands</li>
+                  <li>Select with all kind of filters</li>
+                  <li>Select(nested)</li>
+                  <li>Joins</li>
+                </ul>
+              </div>
+              <li>Advance</li>
+              <div class="ans">
+                <ul>
+                  <li>postgreSQL basics</li>
+                  <li>mongoDB basics</li>
+                  <li>how to connect on SCP</li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Graph QL</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Basic Tutorial</li>
+              <li>Interview qstns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">SAP UI5</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>features of ui5</li>
+              <li>walkthrought</li>
+              <li>controller lifecycle</li>
+              <li>onInit() vs onBeforeRendering ()</li>
+              <li>Formatters</li>
+              <li>Routing:types & parameters</li>
+              <li>Factory fuunctions</li>
+              <li>Binding types and details</li>
+              <li>Fragments & callbacks</li>
+              <li>OPA</li>
+              <li>data definition in manifest</li>
+              <li>use of menifest</li>
+              <li>use of component.js</li>
+              <li>use of neoapp.json</li>
+              <li>use of i18n</li>
+              <li>use of mock server/mock data</li>
+              <li>Master detail page</li>
+              <li>UI5 interview qstns</li>
+              <li>smart template</li>
+              <li>custom control</li>
+              <li>whats new</li>
+              <li>define vs require</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">SCP Neo</div>
+        <div class="box hide">
+          <div class="qstn"></div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">OData</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>what is it?</li>
+              <li>how is it better?</li>
+              <li>important query params</li>
+              <li>how to handle batch/parse batch response</li>
+              <li>diff btw v2 & v4</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">HANA</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Features & Advantages</li>
+              <li>OLTP or OLAP</li>
+              <li>XSJS</li>
+              <li>XSOData</li>
+              <li>Online workspace</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">Team & Projects</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Short intro of product?</li>
+              <li>Short intro of work you did?</li>
+              <li>Why you like this work/team?</li>
+              <li>what were the challenges you faced?</li>
+              <li>what you expect from a team?</li>
+              <li>Bobj</li>
+              <div class="ans">
+                <ul>
+                  <li>History & Usage</li>
+                </ul>
+              </div>
+              <li>APIM</li>
+              <div class="ans">
+                <ul>
+                  <li>History & Usage</li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="subtitle" onclick="showDetails(event)">SAP</div>
+        <div class="box hide">
+          <div class="qstn">
+            <ul>
+              <li>Future goals</li>
+              <li>investments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

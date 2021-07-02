@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link rel="icon" href="icon.jpg" type="image/gif" sizes="16x16">
+<title>Study</title>
+<style>
+	.qstn {
+		font-size: 15pt;
+		color: #610B4B;
+	}
+
+	.title {
+		margin-left: 15%;
+		margin-right: 15%;
+		text-align: center;
+		color: white;
+		font-size: 24pt;
+		font-family: sans-serif;
+		padding: .3rem;
+		background-color: #00bf9a;
+	}
+
+	.subtitle {
+		margin-top: 0.8rem;
+		margin-left: 15%;
+		margin-right: 15%;
+		color: white;
+		font-size: 20pt;
+		font-family: sans-serif;
+		padding: .3rem;
+		background-color: #00bf9a;
+	}
+
+	.box {
+		font-family: erdana, helvetica, arial, sans-serif;
+		margin-left: 15%;
+		margin-right: 15%;
+		margin-top: 0.5rem;
+		padding: 0.5rem;
+		border-radius: 3px;
+		background: rgba(255, 255, 255, 1);
+		color: #000;
+		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+		border: 1px solid rgba(200, 200, 200, 0.85);
+	}
+
+	.ans {
+		font-size: 11pt;
+	}
+
+	.code {
+		width: 90%;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		font-family: consolas;
+		font-size: 10pt;
+		padding: 5px;
+		border: 1px solid #d5ddc6;
+		border-left: 4px solid #6b5;
+		box-shadow: 6px 3px 8px #d4d4d4;
+	}
+
+	.block {
+		margin-bottom: 2rem;
+	}
+</style>
+<script>
+</script>
+
+<body bgcolor="#fafafa" class="center">
+	<div class="block">
+		<div class="title">Java Interview Questions</div>
+		<div class="subtitle">General</div>
+		<div class="box">
+			<div class="qstn">
+				Is Empty .java file name a valid source file name?
+			</div>
+			<div class="ans">
+				Yes, save your java file by .java only, compile it by javac .java and run by java yourclassname Let's
+				take a simple example:
+			</div>
+			<div class="code">
+				class A{<br />
+				public static void main(String args[]){ <br />
+				System.out.println("Hello java");<br />
+				}<br />
+				}
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="qstn">
+				What is static variable?
+			</div>
+			<div class="ans">
+				static variable is used to refer the common property of all objects (that is not unique for each object)
+				e.g. company name of employees,college name of students etc.<br />
+				static variable gets memory only once in class area at the time of class loading.
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="qstn">
+				What is static method?
+			</div>
+			<div class="ans">
+				A static method belongs to the class rather than object of a class.<br />
+				A static method can be invoked without the need for creating an instance of a class.<br />
+				static method can access static data member and can change the value of it.
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="qstn">
+				What is static block?
+			</div>
+			<div class="ans">
+				Is used to initialize the static data member.,<br />
+				It is excuted before main method at the time of classloading.
+			</div>
+		</div>
+		<div class="subtitle">All javatpoint topics</div>
+		<div class="subtitle">Collections, differences, applications, interview qstns</div>
+		<div class="subtitle">String functions</div>
+		<div class="subtitle">Comparisons</div>
+		<div class="box">
+			<div class="qstn">
+				What is platform?
+			</div>
+			<div class="ans">
+				A platform is basically the hardware or software environment in which a program runs.
+				There are two types of platforms software-based and hardware-based. Java provides software-based
+				platform.
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
