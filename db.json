@@ -1,0 +1,148 @@
+{
+"board":[
+  {
+    "task_id": "t1",
+    "title": "Task 1",
+    "description": "this is the task 1",
+    "createdBy": "u3",
+    "createdOn": "11/03/2022",
+    "ETA": "20",
+    "assignee": "u2",
+    "assigned": "u4",
+    "status": "Completed"
+  },
+  {
+    "task_id": "t2",
+    "title": "Task 2",
+    "description": "this is the task 2",
+    "createdBy": "u3",
+    "createdOn": "17/03/2022",
+    "ETA": "10",
+    "assignee": "u2",
+    "assigned": "u5",
+    "status": "In Progress"
+  },
+  {
+    "task_id": "t3",
+    "title": "Task 3",
+    "description": "this is the task 3",
+    "createdBy": "u3",
+    "createdOn": "1/03/2022",
+    "ETA": "12",
+    "assignee": "u2",
+    "assigned": "u6",
+    "status": ""
+  },
+  {
+    "task_id": "t4",
+    "title": "Task 4",
+    "description": "this is the task 4",
+    "createdBy": "u2",
+    "createdOn": "21/02/2022",
+    "ETA": "18",
+    "assignee": "u3",
+    "assigned": "u7",
+    "status": "Paused"
+  },
+  {
+    "task_id": "t5",
+    "title": "Task 5",
+    "description": "this is the task 5",
+    "createdBy": "u3",
+    "createdOn": "27/02/2022",
+    "ETA": "6",
+    "assignee": "u1",
+    "assigned": "u8",
+    "status": "In Progress"
+  },
+  {
+    "task_id": "t6",
+    "title": "Task 6",
+    "description": "this is the task 6",
+    "createdBy": "u1",
+    "createdOn": "06/03/2022",
+    "ETA": "13",
+    "assignee": "u2",
+    "assigned": "u4",
+    "status": ""
+  },
+  {
+    "task_id": "t7",
+    "title": "Task 7",
+    "description": "this is the task 7",
+    "createdBy": "u2",
+    "createdOn": "11/03/2022",
+    "ETA": "11",
+    "assignee": "u2",
+    "assigned": "u6",
+    "status": "In Progress"
+  },
+  {
+    "task_id": "t8",
+    "title": "Task 8",
+    "description": "this is the task 8",
+    "createdBy": "u3",
+    "createdOn": "11/03/2022",
+    "ETA": "22",
+    "assignee": "u2",
+    "assigned": "u7",
+    "status": "Completed"
+  }
+  ],
+  "users":[
+    {
+        "id": "u1",
+        "name": "John",
+        "email": "john@abc.com",
+        "role": "Manager"
+    },
+    {
+        "id": "u2",
+        "name": "Mary",
+        "email": "mary@abc.com",
+        "role": "Scrum Master"
+    },
+    {
+        "id": "u3",
+        "name": "David",
+        "email": "david@abc.com",
+        "role": "Product Owner"
+    },
+    {
+        "id": "u4",
+        "name": "Jacob",
+        "email": "jacob@abc.com",
+        "role": "Senior Dev"
+    },
+    {
+        "id": "u5",
+        "name": "Eric",
+        "email": "eric@abc.com",
+        "role": "QA"
+    },
+    {
+        "id": "u6",
+        "name": "Lisa",
+        "email": "lisa@abc.com",
+        "role": "Dev"
+    },
+    {
+        "id": "u7",
+        "name": "Will",
+        "email": "will@abc.com",
+        "role": "Dev"
+    },
+    {
+        "id": "u8",
+        "name": "Rhea",
+        "email": "rhea@abc.com",
+        "role": "Intern"
+    },
+    {
+        "id": "u9",
+        "name": "Chomu",
+        "email": "chomu@abc.com",
+        "role": "Documentation"
+    }
+    ]
+}
